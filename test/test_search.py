@@ -1,3 +1,7 @@
+# python imports
+import time
+
+# local imports
 import search.search_dna as search_dna
 
 
@@ -103,4 +107,6 @@ n = len(tar)
 
 print('')
 print('Run time for reference length m={}, and target length n={} and #runs={} is: {}'.format(m, n, number_, run_time))
+# For window, may need this to see all output.
+time.sleep(5)
 
