@@ -95,12 +95,12 @@ tar = tar + tar + tar
 setup_ = "import search.search_dna as search_dna"
 stmt_ = "search_dna.search_reference('{}', '{}', cache=False)".format(ref, tar)
 
-number_ = 10000
+number_ = 4000
 run_time = timeit.timeit(stmt_, setup_, number=number_)
 
 m = len(ref)
 n = len(tar)
 
 print('')
-print('run_time for m={}, n={} and #runs={} is: {}'.format(m, n, number_, run_time))
+print('Run time for reference length m={}, and target length n={} and #runs={} is: {}'.format(m, n, number_, run_time))
 
