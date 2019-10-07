@@ -1,3 +1,5 @@
+# DNA search utilities.
+
 
 class BadDnaString(Exception):
     """ Special exception for invalid DNA input strings"""
@@ -6,7 +8,10 @@ class BadDnaString(Exception):
 
 
 class DnaLookupTable():
-    """ Table for saving results to lookup if available"""
+    """ Table for saving results, to then lookup if available
+
+    To eliminate duplicate calculations
+    """
     def __init__(self):
         self.lookup_table = {}
 
@@ -44,6 +49,7 @@ def complement(char):
     """ Returns the complement on the input nucleotide"""
     return DICT_COMPLEMENT[char]
 
+
 def reverse_complement(dna_string):
     """ return the reverse complement of the input value
 
@@ -56,8 +62,6 @@ def reverse_complement(dna_string):
     while i > -1:
         rc_list.append(dna_string[i])
         i -= 1
-
-    assert(len(rc_list) == len(dna_string))
 
     for i, char in enumerate(rc_list):
         rc_list[i] = complement(char)
@@ -73,6 +77,7 @@ def search_reference(reference, target, cache=True):
     :param reference: A DNA sequence consisting of letters from the set {A,C,T,G}, as a string
     :param target: Typically a shorter DNA sequence consisting of same letters as reference, as a string
     :return: a tuple: (total, {'target': [<start-locations], 'rc': [<start_locations]})
+             separate the target and reverse complement locations, assuming that is useful.
     """
 
     # Todo: would this be faster if we converted to ints and used a numpy array
