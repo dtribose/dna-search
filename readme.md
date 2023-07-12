@@ -21,7 +21,7 @@ To run tests, type:
 Should contain 8 tests and the first 7 should pass on all systems.
 The last is a speed test, and would just indicate that your system is particularly slow, or you have resource constraints.
 
-# Explanation of methods
+# Explanation of methods and time complexity
 
 1. Uses the string find() command to find the first occurrence (loc) of target in reference[0:],
    Then continues to look for the target in reference from that point forward reference[loc+1:]
@@ -36,15 +36,15 @@ reference where you can find the target and it's reverse complement).
   - O(m)
   - does not appear to depend on length of target.
 
-# TODO
+## TODO
 
-Issues
+# Issues
 
 If we need to handle human genome that could be an issue, since it is on the order of 3 GB.
   - Test larger genomes
   - Consider how to do db string lookups more quickly
 
-Suggestions & Fture plans
+# Suggestions & Fture plans
 
 Compare speed of calculating results vs. looking it up in dictionary.
 
