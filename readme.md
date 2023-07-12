@@ -44,13 +44,13 @@ If we need to handle human genome that could be an issue, since it is on the ord
   - Test larger genomes
   - Consider how to do db string lookups more quickly
 
-# Suggestions & Fture plans
+# Suggestions & Future plans
 
 Compare speed of calculating results vs. looking it up in dictionary.
 
 Investigate availability of other dna/biology libraries for possibly faster timing.
 
-Add Django or Flask to add a gui front end.
+Use Django or Flask to add a gui front end.
 
 Implement an SQL backend with PostgreSQL or other DB.
 
