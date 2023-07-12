@@ -8,12 +8,10 @@ After unzipping these files:
  3. Either (a) make sure pyTest is installed, or 
            (b) create a new virtual environment and run 'pip install pyTest'.
 
-Note: current code was only tested on windows powershell command line. Minor changes may be needed for Linux or OSX.
+Note: 
+  current code was only tested on windows powershell command line. 
+  Minor changes to the instructions may be needed for Linux or Mac OS.
 
-## Running the server
-
-Include instructions here required to start and stop the development server.
-This is not applicable - since no Django, or Flask components included.
 
 ## Running tests
 
@@ -39,17 +37,22 @@ reference where you can find the target and it's reverse complement).
   - does not appear to depend on length of target.
 
 # TODO
-Issues, suggestions, future plans
+
+Issues
 
 If we need to handle human genome that could be an issue, since it is on the order of 3 GB.
   - Test larger genomes
   - Consider how to do db string lookups more quickly
 
-It appears to be almost as fast to calculate results as it is to look it up in dictionary.
+Suggestions & Fture plans
 
-Investigate availability of dna/biology libraries for possibly faster timing.
+Compare speed of calculating results vs. looking it up in dictionary.
 
-Add Django to create db and gui as requested.
+Investigate availability of other dna/biology libraries for possibly faster timing.
+
+Add Django or Flask to add a gui front end.
+
+Implement an SQL backend with PostgreSQL or other DB.
 
 Setup to run in Docker
  
